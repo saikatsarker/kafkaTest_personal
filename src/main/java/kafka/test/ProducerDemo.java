@@ -1,4 +1,4 @@
-package com.github.saikatsarker.kafka.test;
+package kafka.test;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class ProducerDemo {
     public static void main(String[] args){
-        String bootstrapServer = "35.239.201.205:9092";
+        String bootstrapServer = "35.239.201.205:9112";
 
         Properties prop =  new Properties();
         prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
