@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>kafka-streams-filter-tweets</module>
+        <module>kafka-schema-registry</module>
     </modules>
 
     <dependencies>

@@ -18,7 +18,7 @@ public class ConsumerDemo {
         Logger log = LoggerFactory.getLogger(ConsumerDemo.class.getName());
 
         //local variables
-        String bootstrapServer = "35.239.201.205:9092";
+        String bootstrapServer = "35.222.207.78:9112,35.222.207.78:9111,35.222.207.78:9113";
         String groupId = "consumer_client_01";
 
         //setting consumer properties
@@ -34,7 +34,7 @@ public class ConsumerDemo {
 
         //Subscribe consumer to kafka topics
         //consumer.subscribe(Pattern.compile("kafkatopic.*")); // is taking multiple topics, what are the other ways?
-        consumer.subscribe(Arrays.asList("tweeter_input"));
+        consumer.subscribe(Arrays.asList("kafkatopic2"));
 
         //read data from the subscribed topics
         while(true){

@@ -26,10 +26,10 @@ public class ConsumerThreadDemo {
         Logger log = LoggerFactory.getLogger(ConsumerThreadDemo.class.getName());
 
         //local variables
-        String bootstrapServer = "35.239.201.205:9092";
+        String bootstrapServer = "35.222.207.78:9112,35.222.207.78:9111,35.222.207.78:9113";
         String groupId = "consumer_client_02";
         //String topics = "kafkatopic.*";
-        String topics = "kafkatopic1";
+        String topics = "kafkatopic2";
 
         //define latch to deal multiple thread
         CountDownLatch latch = new CountDownLatch(1);

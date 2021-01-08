@@ -12,13 +12,15 @@ public class ProducerCallbackDemo {
         //logging the process of sending data
         Logger logger = LoggerFactory.getLogger(ProducerCallbackDemo.class);
         //kafka broker ip:port
-        String bootstrapServer = "35.239.201.205:9112s";
+        String bootstrapServer = "35.222.207.78:9112,35.222.207.78:9111,35.222.207.78:9113";
 
         //setting kafka producer properties
         Properties prop =  new Properties();
         prop.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         prop.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         prop.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        prop.setProperty(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, "100");
+        prop.setProperty(ProducerConfig.RETRIES_CONFIG, "3");
         prop.setProperty("security.protocol", "PLAINTEXT");
 
         //calling kafka producer
